@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
 import PlanilhaControle from './components/PlanilhaControle';
 import Products from './components/Products';
 import Navigation from './components/Navigation';
 import Login from './components/Login'; // Componente de login
 import Gallery from './components/Gallery'; // Componente da galeria
-// import Weather from './components/Weather'; // Componente da previsão do tempo
+
 
 import './App.css';
 
