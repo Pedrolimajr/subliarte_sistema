@@ -1,6 +1,7 @@
 {
   "name": "subliarte_system",
   "private": true,
+  "homepage": "https://pedrolimajr.github.io/subliarte_sistema/",  
   "version": "0.0.0",
   "type": "module",
   "scripts": {
