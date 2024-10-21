@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); /* Importando a fonte Roboto */
+
+.navigation {
+  display: flex; /* Usando flexbox */
+  justify-content: space-between; /* Espaçamento entre logo e itens */
+  align-items: center; /* Centraliza verticalmente */
+  background: linear-gradient(90deg, #1F4075, #156DA5, #1086C4); /* Gradiente de fundo */
+  padding: 15px 30px; /* Espaçamento interno */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra mais intensa */
+  position: relative; /* Para o efeito de brilho */
+  border-radius: 20px; /* Bordas arredondadas */
+  transition: background 0.3s, box-shadow 0.3s; /* Transição suave no fundo */
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600; /* Peso da fonte */
+}
+
+.navigation:hover {
+  background: linear-gradient(90deg, #1086C4, #156DA5, #1F4075); /* Muda o gradiente ao passar o mouse */
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4); /* Sombra mais intensa ao passar o mouse */
+}
+
+.nav-logo {
+  color: #FFFFFF; /* Cor da logo */
+  font-size: 26px; /* Tamanho da fonte */
+  font-weight: bold; /* Fonte em negrito */
+  transition: color 0.3s, transform 0.3s; /* Transição suave */
+  width: 80px;
+}
+
+.nav-logo:hover {
+  color: #F37420; /* Cor ao passar o mouse */
+  transform: scale(1.05); /* Levemente aumenta o tamanho ao passar o mouse */
+}
+
+.nav-list {
+  list-style: none; /* Remove a lista padrão */
+  display: flex; /* Itens em linha */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+  font-size: 20px;
+}
+
+.nav-item {
+  margin-left: 30px; /* Espaçamento entre itens */
+}
+
+.nav-link {
+  font-family: 'Roboto', sans-serif; /* Fonte mais bonita */
+  color: #FFFFFF; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado */
+  padding: 12px 18px; /* Preenchimento para efeito de clique */
+  border-radius: 8px; /* Bordas arredondadas */
+  position: relative; /* Para o efeito de brilho */
+  overflow: hidden; /* Para ocultar o efeito de brilho */
+  transition: background 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+}
+
+.nav-link::after {
+  content: ''; /* Cria um pseudo-elemento */
+  position: absolute; /* Posiciona absolutamente */
+  bottom: 0; /* Fica na parte inferior */
+  left: 50%; /* Centraliza horizontalmente */
+  width: 0%; /* Largura inicial */
+  height: 3px; /* Altura da linha */
+  background: #F37420; /* Cor da linha */
+  transition: width 0.3s ease, left 0.3s ease; /* Transição suave */
+}
+
+.nav-link:hover::after {
+  width: 100%; /* Preenche a linha ao passar o mouse */
+  left: 0; /* Move para a esquerda */
+}
+
+/* Estilização do botão de logout */
+.logout-button {
+  background-color: #FFBD00; /* Cor de fundo do botão */
+  color: #1F4075; /* Cor do texto do botão */
+  border: none; /* Remove bordas */
+  padding: 10px 20px; /* Preenchimento do botão */
+  border-radius: 8px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+  font-weight: bold; /* Fonte em negrito */
+  transition: background 0.3s, color 0.3s, transform 0.3s; /* Transições suaves */
+  margin-left: 30px; /* Aumenta o espaço entre os links e o botão */
+  position: relative; /* Para o efeito de brilho */
+  overflow: hidden; /* Para ocultar o efeito de brilho */
+  font-size: 15px;
+}
+
+.logout-button:hover {
+  background-color: #F37420; /* Cor do botão ao passar o mouse */
+  color: #FFFFFF; /* Cor do texto ao passar o mouse */
+  transform: scale(1.05); /* Levemente aumenta o tamanho ao passar o mouse */
+}
+
+/* Efeito de brilho no botão */
+.logout-button::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 189, 0, 0.5);
+  border-radius: 50%; /* Forma circular */
+  transform: translate(-50%, -50%) scale(0); /* Inicialmente escondido */
+  transition: transform 0.5s ease; /* Transição suave */
+}
+
+.logout-button:hover::after {
+  transform: translate(-50%, -50%) scale(1); /* Expande o efeito de brilho ao passar o mouse */
+}
+
+.menu-toggle {
+  display: none; /* Inicialmente escondido para telas grandes */
+  font-size: 28px; /* Tamanho do ícone do menu */
+  color: #FFFFFF; /* Cor do ícone */
+  background: none; /* Remove fundo */
+  border: none; /* Remove borda */
+  cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+/* Estilos para o menu quando o botão é clicado */
+.nav-list {
+  display: flex; /* Exibe o menu como flexbox */
+  transition: max-height 0.3s ease; /* Transição suave para abrir e fechar o menu */
+}
+
+.nav-list.open {
+  display: flex; /* Mantém o menu visível */
+  flex-direction: column; /* Coloca os itens em coluna */
+  position: absolute; /* Fica sobreposto ao conteúdo */
+  top: 60px; /* Espaçamento abaixo do nav */
+  right: 30px; /* Alinhamento à direita */
+  background: linear-gradient(90deg, #1F4075, #156DA5, #1086C4); /* Mesma cor de fundo */
+  border-radius: 10px; /* Bordas arredondadas */
+  z-index: 1; /* Coloca acima de outros elementos */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-list {
+    display: none; /* Esconde o menu em telas pequenas */
+    flex-direction: column; /* Itens em coluna */
+    width: 100%; /* Largura total */
+    background: linear-gradient(90deg, #1F4075, #156DA5, #1086C4); /* Cor de fundo */
+  }
+
+  .nav-list.open {
+    display: flex; /* Mostra o menu ao abrir */
+  }
+
+  .menu-toggle {
+    display: block; /* Mostra o botão de menu em telas pequenas */
+  }
+
+  .nav-item {
+    margin-left: 0; /* Remove espaçamento entre itens */
+    margin-bottom: 10px; /* Adiciona espaçamento abaixo de cada item */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .nav-link {
+    font-size: 18px; /* Reduz o tamanho da fonte */
+  }
+
+  .nav-logo {
+    font-size: 22px; /* Reduz o tamanho da logo */
+  }
+
+  .logout-button {
+    font-size: 14px; /* Reduz o tamanho da fonte do botão de logout */
+    margin-left: 0; /* Remove o espaço à esquerda */
+    width: 100%; /* Largura total */
+    margin-top: 10px; /* Adiciona espaçamento acima do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 20px; /* Ajusta ainda mais o tamanho da logo */
+  }
+
+  .nav-link {
+    font-size: 16px; /* Ajusta ainda mais o tamanho da fonte */
+  }
+
+  .logout-button {
+    font-size: 13px; /* Ajusta ainda mais o tamanho da fonte do botão de logout */
+  }
+}

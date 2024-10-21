@@ -1,0 +1,344 @@
+/* Estilos Gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container-products {
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.h1-products {
+  color: #1F4075;
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600; /* Normal */
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+/* Botões */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+
+.toggle-form-btn {
+  background-color: #156DA5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-shadow: 3px 3px 4px black;
+}
+
+.acoes-produto {
+  width: 15%;
+}
+
+.toggle-form-btn:hover {
+  background-color: #1086C4;
+}
+
+/* Tabela de Produtos */
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.products-table th,
+.products-table td {
+  border: 1px solid #ddd;
+  padding: 12px; /* Aumentado para maior espaçamento */
+}
+
+.products-table th {
+  background-color: #1F4075;
+  color: white;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Linhas alternadas para melhor legibilidade */
+}
+
+.products-table tr:hover {
+  background-color: #e0e0e0; /* Destaque na linha ao passar o mouse */
+}
+
+/* Ações dos Produtos */
+td button {
+  background-color: #156DA5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 5px 8px; /* Ajustado para menor tamanho */
+  margin: 0 10px; /* Margem horizontal entre os botões */
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Estilos do Formulário e Modais */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.product-form-container {
+  background: white;
+  padding: 30px; /* Aumentado para maior espaçamento interno */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  width: 90%; /* Ajuste para aumentar a largura */
+  max-width: 600px; /* Tamanho máximo para a modal */
+}
+
+/* Estilos para o Relatório */
+#report-table {
+  overflow-x: auto; /* Permite rolagem se necessário */
+}
+
+.acoes-products {
+  width: 20%;
+}
+
+.btn-editar,
+.btn-excluir {
+  margin: 0px 9px 6px; /* Margem lateral entre os botões */
+  width: 80px; /* Garantindo que ambos os botões tenham a mesma largura */
+  text-align: center; /* Alinha o texto no centro */
+}
+
+.btn-excluir:hover {
+  background-color: #D33;
+}
+.btn-editar:hover {
+  background-color: #1086C4;
+}
+.product-form-container table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.product-form-container table th,
+.product-form-container table td {
+  border: 1px solid #ddd;
+  padding: 10px; /* Aumentado para maior espaçamento */
+  
+}
+
+
+.product-form-container table th {
+  background-color: #1F4075;
+  color: white;
+}
+
+/* Margens do Modal */
+.product-form-container {
+  margin: 20px;
+}
+
+/* Ajustes para a janela de entrada e saída de produtos */
+.product-form-container h2 {
+  margin-bottom: 20px; /* Espaço abaixo do título */
+}
+
+.product-form-container select,
+.product-form-container input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px; /* Espaço entre os campos */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.product-form-container button {
+  background-color: #156DA5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.product-form-container button:hover {
+  background-color: #1086C4;
+}
+.product-form-container, .report-excluir{
+  background-color: #156DA5;
+}
+
+button.report-excluir:hover{
+  background-color: #D33;
+}
+
+.product-form-container {
+  max-height: 80vh; /* Limita a altura máxima da modal */
+  overflow-y: auto; /* Permite a rolagem vertical quando necessário */
+  padding: 20px; /* Adiciona um espaço interno */
+  border-radius: 10px; /* Bordas arredondadas */
+  background-color: #fff; /* Fundo branco */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+
+
+table {
+  width: 100%; /* Faz a tabela ocupar toda a largura */
+  border-collapse: collapse; /* Remove os espaços entre as células */
+}
+
+th,
+td {
+  border: 1px solid #ddd; /* Bordas nas células */
+  padding: 8px; /* Espaçamento interno */
+  text-align: left; /* Alinhamento à esquerda */
+}
+
+th {
+  background-color: #f2f2f2; /* Cor de fundo dos cabeçalhos */
+}
+
+
+/* Campo de Pesquisa */
+.search-input {
+  width: 100%;
+  max-width: 400px; /* Tamanho máximo para o campo */
+  padding: 10px 15px; /* Espaçamento interno */
+  font-size: 16px; /* Tamanho da fonte */
+  border: 2px solid #ccc; /* Bordas suaves */
+  border-radius: 4px; /* Bordas arredondadas */
+  margin-right: 10px; /* Espaço à direita */
+  margin-bottom: 30px; /* Espaço abaixo */
+  
+  font-family: Arial, sans-serif; /* Familia de fonte */
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  transition: border-color 0.3s ease; /* Transição suave ao focar */
+}
+
+.search-input:focus {
+  border-color: #1F4075; /* Cor da borda ao focar */
+  outline: none; /* Remove o outline padrão */
+}
+
+/* Botão de Pesquisa */
+.search-btn {
+  background-color: #1F4075; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px; /* Aumenta o tamanho do botão */
+  font-size: 16px; /* Tamanho da fonte */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o botão */
+  margin-bottom: 20px;
+}
+
+.search-btn:hover {
+  background-color: #1086C4; /* Muda a cor ao passar o mouse */
+}
+
+
+/* Responsividade */
+/* Responsividade */
+@media (max-width: 768px) {
+  .container-products {
+    width: 90%; /* Aumenta a largura em telas menores */
+    margin-top: 30px; /* Menor espaçamento superior */
+    padding: 15px; /* Menor padding */
+  }
+
+  .h1-products {
+    font-size: 2rem; /* Reduz o tamanho da fonte */
+  }
+
+  .buttons-container {
+    flex-direction: column; /* Empilha os botões */
+    align-items: center; /* Centraliza os botões */
+    gap: 10px; /* Menor espaço entre os botões */
+  }
+
+  .toggle-form-btn {
+    width: 100%; /* Botão ocupa toda a largura */
+    padding: 10px; /* Menor padding */
+  }
+
+  .products-table th,
+  .products-table td {
+    font-size: 14px; /* Tamanho da fonte reduzido */
+    padding: 10px; /* Aumenta o padding para melhor usabilidade */
+  }
+
+  .btn-editar,
+  .btn-excluir {
+    width: 100%; /* Botões ocupam toda a largura em telas menores */
+    margin-bottom: 10px; /* Espaço abaixo dos botões */
+  }
+
+  .search-input {
+    width: 100%; /* Campo de pesquisa ocupa toda a largura */
+    margin-bottom: 15px; /* Menor espaço abaixo */
+  }
+
+  .search-btn {
+    width: 100%; /* Botão de pesquisa ocupa toda a largura */
+  }
+ 
+}
+
+@media (max-width: 480px) {
+  .h1-products {
+    font-size: 1.5rem; /* Tamanho da fonte reduzido */
+  }
+
+  .product-form-container {
+    padding: 15px; /* Menor padding */
+  }
+
+  .product-form-container select,
+  .product-form-container input {
+    padding: 8px; /* Menor padding */
+  }
+
+  .products-table th,
+  .products-table td {
+    padding: 8px; /* Menor espaçamento nas células */
+  }
+
+  .btn-editar,
+  .btn-excluir {
+    width: auto; /* Botões podem ter largura automática */
+  }
+
+  .search-input {
+    padding: 8px; /* Menor padding */
+  }
+
+  .search-btn {
+    padding: 8px; /* Menor padding */
+    font-size: 14px; /* Tamanho da fonte reduzido */
+  }
+}

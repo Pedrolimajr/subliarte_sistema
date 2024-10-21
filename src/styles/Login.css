@@ -1,0 +1,141 @@
+/* Estilização do contêiner do login */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh; /* Altera para min-height para permitir expansão */
+  background: linear-gradient(to right, #1F4075, #156DA5, #1086C4, #F37420, #F79914, #FFBD00);
+  padding: 20px;
+  font-family: 'Arial', sans-serif; /* Fonte clara e moderna */
+  width: 450px; /* Largura fixa em telas maiores */
+  margin: auto; /* Centraliza horizontalmente */
+  border-radius: 20px;
+  margin-top: 50px; /* Espaçamento superior */
+}
+
+.login-background {
+  background: linear-gradient(to right, #F37420, #F79914, #FFBD00, #1F4075, #156DA5, #1086C4); /* Cor de fundo desejada */
+  height: 100vh; /* Altura total da tela */
+  margin: 0; /* Remove margens */
+}
+
+/* Estilização do título */
+.login-container h1 {
+  margin-bottom: 20px;
+  color: #000; /* Cor do texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para o título */
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+}
+
+/* Estilização do logo */
+.login-logo {
+  margin-bottom: 20px; /* Espaçamento inferior */
+  width: 100px; /* Largura da logo */
+  height: auto; /* Altura automática */
+}
+
+/* Estilização do formulário */
+.login-container form {
+  background-color: #ffffff; /* Fundo branco para o formulário */
+  border-radius: 12px; /* Bordas arredondadas */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  padding: 20px; /* Ajuste para padding */
+  width: 100%; /* Largura total do formulário */
+  transition: transform 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover no formulário */
+.login-container form:hover {
+  transform: scale(1.02); /* Aumenta levemente o formulário ao passar o mouse */
+}
+
+/* Estilização dos rótulos */
+.login-container label {
+  display: block; /* Exibir os rótulos em bloco */
+  margin-bottom: 8px; /* Espaçamento inferior */
+  font-weight: bold; /* Negrito para os rótulos */
+  color: #333; /* Cor do texto dos rótulos */
+}
+
+/* Estilização dos campos de entrada */
+.login-container input {
+  width: 100%; /* Largura total do campo */
+  padding: 10px; /* Espaçamento interno */
+  border: 2px solid #007bff; /* Borda azul */
+  border-radius: 6px; /* Bordas arredondadas */
+  margin-bottom: 15px; /* Espaçamento inferior */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: border-color 0.3s ease; /* Transição suave para a borda */
+}
+
+/* Efeito de foco nos campos de entrada */
+.login-container input:focus {
+  border-color: #0056b3; /* Cor da borda ao focar */
+  outline: none; /* Remove o contorno padrão */
+}
+
+/* Estilização do botão */
+.login-container button {
+  background-color: #007bff; /* Cor de fundo azul */
+  color: white; /* Cor do texto do botão */
+  padding: 10px; /* Espaçamento interno */
+  border: none; /* Sem borda */
+  border-radius: 6px; /* Bordas arredondadas */
+  cursor: pointer; /* Cursor em forma de mão */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+/* Efeito de hover no botão */
+.login-container button:hover {
+  background-color: #0056b3; /* Cor azul escuro ao passar o mouse */
+  transform: scale(1.05); /* Aumenta o botão levemente ao passar o mouse */
+}
+
+/* Estilização da mensagem de erro */
+.error-message {
+  color: red; /* Cor vermelha para mensagens de erro */
+  margin-top: 10px; /* Espaçamento superior */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .login-container {
+    width: 90%; /* Aumenta a largura em telas menores */
+    padding: 15px; /* Reduz o padding */
+    margin-top: 30px; /* Menor espaçamento superior */
+  }
+
+  .login-container h1 {
+    font-size: 2rem; /* Reduz o tamanho da fonte do título */
+  }
+
+  .login-container label {
+    font-size: 14px; /* Ajusta o tamanho da fonte dos rótulos */
+  }
+
+  .login-container input,
+  .login-container button {
+    font-size: 14px; /* Ajusta o tamanho da fonte dos campos e do botão */
+  }
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 95%; /* Largura total em telas menores */
+    padding: 10px; /* Menor padding */
+  }
+
+  .login-container h1 {
+    font-size: 1.5rem; /* Tamanho da fonte do título reduzido */
+  }
+
+  .login-container input,
+  .login-container button {
+    padding: 8px; /* Menor espaçamento interno */
+    font-size: 12px; /* Ajusta o tamanho da fonte dos campos e do botão */
+  }
+}
