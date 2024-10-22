@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useState } from 'react';
-import PlanilhaControle from './components/PlanilhaControle';
-import Products from './components/Products';
-import Navigation from './components/Navigation';
-import Login from './components/Login'; // Componente de login
-import Gallery from './components/Gallery'; // Componente da galeria
+import PlanilhaControle from './components/PlanilhaControle.jsx';
+import Products from './components/Products.jsx';
+import Navigation from './components/Navigation.jsx';
+import Login from './components/Login.jsx'; // Componente de login
+import Gallery from './components/Gallery.jsx'; // Componente da galeria
 
 
 import './App.css';
