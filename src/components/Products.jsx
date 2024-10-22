@@ -11,9 +11,9 @@ const Products = () => {
   };
 
   const [products, setProducts] = useState(() => loadFromLocalStorage('products', [
-    { id: 1, name: 'Caneca', price: 30.00, stock: 10, entryDate: '', exitDate: '' },
-    { id: 2, name: 'Sandália', price: 35.00, stock: 20, entryDate: '', exitDate: '' },
-    { id: 3, name: 'Azulejo 20x20', price: 40.00, stock: 15, entryDate: '', exitDate: '' },
+    { id: 1, name: '', price: 30.00, stock: 10, entryDate: '', exitDate: '' },
+    { id: 2, name: '', price: 35.00, stock: 20, entryDate: '', exitDate: '' },
+    { id: 3, name: '', price: 40.00, stock: 15, entryDate: '', exitDate: '' },
   ]));
 
   const [movements, setMovements] = useState(() => loadFromLocalStorage('movements', []));
