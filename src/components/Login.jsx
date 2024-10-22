@@ -41,8 +41,7 @@ const Login = ({ setIsAuthenticated }) => {
   return (
     
     <div className="login-container">
-        <img src="/subliarte_sistema/logo.png" alt="Logo" className="login-logo" />
-
+        <img src="./logo.png" alt="Logo" className="login-logo" />
       
       <form onSubmit={handleSubmit}>
       <h1>Login</h1>
