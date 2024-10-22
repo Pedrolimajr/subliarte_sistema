@@ -2,7 +2,7 @@
 
 /* Container do fundo da galeria */
 .gallery-container {
-  background: linear-gradient(135deg, rgba(31, 64, 117, 0.9), rgba(0, 0, 0, 0.7)), url('path/to/your/image.jpg'); /* Gradiente sobre a imagem de fundo */
+  background: linear-gradient(135deg, rgba(31, 64, 117, 0.9), rgba(0, 0, 0, 0.7)), url('../assets/images/image1.jpg');/* Gradiente sobre a imagem de fundo */
   background-size: cover; /* Faz a imagem cobrir toda a div */
   background-position: center; /* Centraliza a imagem */
   padding: 60px 20px; /* Espaço ao redor da galeria */
